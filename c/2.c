@@ -37,39 +37,3 @@ struct ListNode *addTwoNumbers(struct ListNode *l1, struct ListNode *l2)
 
     return head;
 }
-
-int main(int argc, char const *argv[])
-{
-
-    struct ListNode *l1 = (struct ListNode *)calloc(1, sizeof(struct ListNode));
-    l1->val = 0;
-    l1->next = NULL;
-
-    struct ListNode *l2 = (struct ListNode *)calloc(1, sizeof(struct ListNode));
-    l2->val = 0;
-    l2->next = NULL;
-
-    const struct ListNode *result = addTwoNumbers(l1, l2);
-
-    while (result != NULL)
-    {
-        printf("%d ", result->val);
-        result = result->next;
-    }
-
-    printf("\n");
-
-    // free all allocated memory
-    free(l1);
-    free(l2);
-
-    // free the result list
-    while (result != NULL)
-    {
-        struct ListNode *temp = (struct ListNode *)result;
-        result = result->next;
-        free(temp);
-    }
-
-    return 0;
-}
