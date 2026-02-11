@@ -7,17 +7,6 @@ struct ListNode
     struct ListNode *next;
 };
 
-static inline int powerInt(int base, int exp)
-{
-    int result = 1;
-    for (int i = 0; i < exp; i++)
-    {
-        result *= base;
-    }
-
-    return result;
-}
-
 struct ListNode *addTwoNumbers(struct ListNode *l1, struct ListNode *l2)
 {
     int carry = 0;
