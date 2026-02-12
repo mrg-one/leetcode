@@ -9,8 +9,8 @@
                 "-g",
                 "-O0",
                 "-o",
-                "${fileDirname}/main",
-                "${file}"
+                "${workspaceFolder}/main",
+                "${workspaceFolder}/main.c"
             ],
             "group": {
                 "kind": "build",
