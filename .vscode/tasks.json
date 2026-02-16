@@ -4,13 +4,13 @@
         {
             "label": "gcc build active file",
             "type": "shell",
-            "command": "gcc",
+            "command": "g++",
             "args": [
                 "-g",
                 "-O0",
                 "-o",
                 "${workspaceFolder}/main",
-                "${workspaceFolder}/main.c"
+                "${workspaceFolder}/main.cpp"
             ],
             "group": {
                 "kind": "build",
